@@ -339,7 +339,7 @@
     bio.textContent = ARTIST.bio || "";
     bio.hidden = !textValue(ARTIST.bio);
     document.getElementById("cv-name").textContent = ARTIST.nameKo
-      ? ARTIST.name + "  /  " + ARTIST.nameKo
+      ? ARTIST.name + "  " + ARTIST.nameKo
       : ARTIST.name;
     document.getElementById("footer-copy").textContent =
       "© " + new Date().getFullYear() + " " + ARTIST.name;
@@ -354,8 +354,17 @@
     });
 
     const email = document.getElementById("about-email");
-    email.href = "mailto:" + ARTIST.email;
-    email.textContent = ARTIST.email;
+    const contact = ARTIST.email || "";
+    const isWeb = contact.indexOf("http://") === 0 || contact.indexOf("https://") === 0;
+    email.href = isWeb ? contact : "mailto:" + contact;
+    email.textContent = isWeb ? "Brunch" : contact;
+    if (isWeb) {
+      email.target = "_blank";
+      email.rel = "noopener noreferrer";
+    } else {
+      email.removeAttribute("target");
+      email.removeAttribute("rel");
+    }
 
     const instagram = document.getElementById("about-instagram");
     if (ARTIST.instagram) {

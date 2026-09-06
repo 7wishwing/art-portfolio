@@ -9,13 +9,13 @@ const ARTIST = {
   name: "허규",
   nameKo: "HEU GYU",
   location: "Busan, Korea",
-  email: "hello@example.com",
+  email: "https://brunch.co.kr/@quetzal",
   instagram: "https://www.instagram.com/0131_q/",
   siteTitle: "허규",
   statement: [
     "\"살아 있기 때문에 그린다.\"",
-    "연약하면서도 질긴 하나의 생명을 가지고, 소소하고 보잘것없는 세계 속에서 아름다움과 즐거움을 발견하기 위해 그렇게 살아 있기 위해 그림을 그린다.",
-    "나는 내가 발견한 것을 하나의 정답으로 제시하고 싶지 않다. 작품을 마주한 사람이 자신의 감각과 생각으로 이미지를 경험하고, 각자의 방식으로 무언가를 발견하기를 바란다.",
+    "연약하면서도 질긴 하나의 생명을 가지고, 소소하고 보잘것없는 세계 속에서 아름다움과 즐거움을 발견하기 위해, 그렇게 살아 있기 위해서 그린다.",
+    "나는 내가 발견한 것을 하나의 정답으로 제시하고 싶지 않다. 작품을 마주한 사람이 자신의 감각과 생각으로 경험하고, 각자의 방식으로 무언가를 발견하기를 바란다.",
     "이러한 태도에서 출발해 이미지가 물질과 공간을 만나며 어떻게 감각되고 경험되는지에 관심을 두고 작업한다. 수묵과 드로잉을 비롯해 입체, 사진, 게임 인터랙티브 아트 등 다양한 매체를 오가며 이미지와 물질, 공간 사이의 관계를 탐구한다.",
     "작품을 통해 일방적으로 말하기보다, 서로 다른 감각과 해석이 공존하는 전시 공간을 관객과 함께 만들어 가고 싶다.",
   ],
@@ -32,15 +32,15 @@ const ARTIST = {
 const CV = {
   education: [
     {
-      title: "Hongik University, Seoul, Korea",
+      title: "Hongik University, Korea",
       lines: [
         "B.F.A., School of Film and Animation",
         "Double Major in Oriental Painting",
       ],
     },
     {
-      title: "Kyoto University of the Arts, Kyoto, Japan",
-      lines: ["Exchange Student, Digital Information"],
+      title: "Kyoto University of the Arts, Japan",
+      lines: ["Exchange Student, Department of Information Design"],
     },
   ],
   awards: [
@@ -210,7 +210,7 @@ const WORKS = [
     title: "Belonging",
     year: "2023",
     medium: "물티슈, 파스텔",
-    size: "120 × 110 cm",
+    size: "110 × 120 cm",
     description: "",
     image: "images/sculpture/입체 01.jpg",
     images: ["images/sculpture/입체 01.jpg"],

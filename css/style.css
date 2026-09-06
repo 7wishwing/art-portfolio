@@ -636,6 +636,10 @@ body.is-drawing-page .category-nav {
   letter-spacing: 0.06em;
 }
 
+#cv-name {
+  margin-bottom: 2.5rem;
+}
+
 .about-location {
   margin: 0.4rem 0 2.5rem;
   color: var(--muted);
@@ -671,6 +675,7 @@ body.is-drawing-page .category-nav {
   margin: 2.5rem 0 0;
   padding: 0;
   list-style: none;
+  color: #5a5a5a;
   font-size: 0.82rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
