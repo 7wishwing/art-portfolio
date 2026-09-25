@@ -859,7 +859,7 @@
       const card = document.createElement("a");
       card.className = "work-card";
       if (layout === "large") {
-        if (work.id === featuredId) card.classList.add("is-featured");
+        if (work.id === featuredId && work.category === "ink") card.classList.add("is-featured");
         if (isView) card.classList.add("is-view");
         if (work.wide) card.classList.add("is-wide");
         if (work.compact) card.classList.add("is-compact");
@@ -1005,8 +1005,9 @@
     detail.classList.toggle("is-large", isLarge);
     detail.classList.toggle("is-sculpture", isSculpture);
     detail.classList.toggle("is-drawing", isDrawing);
+    detail.classList.toggle("is-photo", work.category === "photo");
     detail.classList.remove("is-video");
-    detail.classList.toggle("is-featured", isLarge && work.type !== "view" && work.order === 1);
+    detail.classList.toggle("is-featured", work.category === "ink" && work.type !== "view" && work.order === 1);
     detail.classList.toggle("is-view", work.type === "view");
     detail.classList.toggle("is-wide", !!work.wide);
     detail.classList.toggle("is-compact", !!work.compact);

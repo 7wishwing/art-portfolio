@@ -145,6 +145,50 @@ main {
   color: var(--muted);
 }
 
+.works-grid.is-grid {
+  display: block;
+  max-width: 980px;
+  column-count: 1;
+  column-gap: 1.75rem;
+}
+
+.works-grid.is-grid .work-card {
+  display: block;
+  width: 100%;
+  margin: 0 0 1.75rem;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.works-grid.is-grid .work-card:last-child {
+  margin-bottom: 0;
+}
+
+.works-grid.is-grid .thumb {
+  background: transparent;
+}
+
+.works-grid.is-grid .work-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.works-grid.is-grid .work-card:hover img {
+  opacity: 0.86;
+}
+
+.detail.is-photo .detail-figure {
+  max-width: min(920px, 100%);
+  background: transparent;
+}
+
+.detail.is-photo .detail-figure img {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
 .works-grid.is-large {
   max-width: 1400px;
   gap: 6.5rem;
@@ -1102,8 +1146,13 @@ body.is-dark-page .game-card .thumb {
 
 @media (min-width: 720px) {
   .works-grid.is-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 2.5rem 2rem;
+    column-count: 2;
+    max-width: 1040px;
+    column-gap: 1.85rem;
+  }
+
+  .works-grid.is-grid .work-card {
+    margin-bottom: 1.85rem;
   }
 
   .works-grid.is-large {
@@ -1121,8 +1170,14 @@ body.is-dark-page .game-card .thumb {
 
 @media (min-width: 1100px) {
   .works-grid.is-grid {
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 2.75rem 2.25rem;
+    max-width: 1120px;
+    column-count: 2;
+    column-gap: 2.1rem;
+    grid-template-columns: none;
+  }
+
+  .works-grid.is-grid .work-card {
+    margin-bottom: 2.1rem;
   }
 
   .works-grid.is-large {
