@@ -320,6 +320,53 @@ body.is-drawing-page .category-nav {
   margin-bottom: 0.45rem;
 }
 
+body.is-dark-page {
+  background: #000;
+  color: #fff;
+  color-scheme: dark;
+}
+
+html:has(body.is-dark-page) {
+  background: #000;
+}
+
+body.is-dark-page .site-header {
+  background: rgba(0, 0, 0, 0.92);
+}
+
+body.is-dark-page .skip-link {
+  background: #000;
+}
+
+body.is-dark-page a:hover {
+  color: #a3a3a3;
+}
+
+body.is-dark-page .nav a.is-current,
+body.is-dark-page .category-nav a.is-current {
+  color: #8a8a8a;
+}
+
+body.is-dark-page .video-meta .work-year,
+body.is-dark-page .game-meta .game-note,
+body.is-dark-page .game-meta .work-year,
+body.is-dark-page .site-footer {
+  color: #b0b0b0;
+}
+
+body.is-dark-page .video-arrow {
+  color: #b0b0b0;
+}
+
+body.is-dark-page .video-arrow:hover,
+body.is-dark-page .video-arrow:focus-visible {
+  color: #fff;
+}
+
+body.is-dark-page .game-card .thumb {
+  background: #111;
+}
+
 .works-grid.is-float {
   display: block;
   position: relative;
@@ -782,12 +829,12 @@ body.is-drawing-page .category-nav {
   margin: 0 auto;
 }
 
-.detail.is-ink .detail-figure {
+.detail.is-large .detail-figure {
   max-width: 920px;
   background: transparent;
 }
 
-.detail.is-ink .detail-figure img {
+.detail.is-large .detail-figure img {
   width: 100%;
   height: auto;
 }
@@ -911,29 +958,29 @@ body.is-drawing-page .category-nav {
   }
 }
 
-.detail.is-ink.is-featured {
+.detail.is-large.is-featured {
   max-width: 1400px;
 }
 
-.detail.is-ink.is-view,
-.detail.is-ink.is-wide {
+.detail.is-large.is-view,
+.detail.is-large.is-wide {
   max-width: 1240px;
 }
 
-.detail.is-ink.is-featured .detail-figure {
+.detail.is-large.is-featured .detail-figure {
   max-width: 1320px;
 }
 
-.detail.is-ink.is-view .detail-figure,
-.detail.is-ink.is-wide .detail-figure {
+.detail.is-large.is-view .detail-figure,
+.detail.is-large.is-wide .detail-figure {
   max-width: 1180px;
 }
 
-.detail.is-ink.is-compact {
+.detail.is-large.is-compact {
   max-width: 700px;
 }
 
-.detail.is-ink.is-compact .detail-figure {
+.detail.is-large.is-compact .detail-figure {
   max-width: 600px;
 }
 

@@ -32,6 +32,11 @@
     return CATEGORIES.find((category) => category.id === id) || null;
   }
 
+  function isLargeWork(work) {
+    const category = findCategory(work.category);
+    return !!(category && category.layout === "large");
+  }
+
   function worksInCategory(categoryId) {
     return WORKS.filter((work) => work.category === categoryId).slice().sort(function (a, b) {
       return (a.order || 0) - (b.order || 0);
@@ -61,7 +66,7 @@
       link.classList.toggle("is-current", current);
     });
 
-    if (name !== "works") document.body.classList.remove("is-drawing-page");
+    if (name !== "works") document.body.classList.remove("is-drawing-page", "is-dark-page");
     if (name !== "works") pausePageVideo();
     if (!(options && options.keepScroll)) window.scrollTo(0, 0);
   }
@@ -821,6 +826,7 @@
     const category = findCategory(categoryId);
     const layout = category && category.layout ? category.layout : "large";
     document.body.classList.toggle("is-drawing-page", layout === "float");
+    document.body.classList.toggle("is-dark-page", layout === "video" || layout === "game");
     if (layout !== "video") pausePageVideo();
     if (layout === "sculpture") {
       renderSculpture(categoryId);
@@ -878,7 +884,7 @@
         label.textContent = "Exhibition view";
         caption.appendChild(label);
         figure.appendChild(caption);
-      } else if (work.category !== "ink" && (title || year)) {
+      } else if (!isLargeWork(work) && (title || year)) {
         const caption = document.createElement("figcaption");
         if (title) {
           const titleEl = document.createElement("span");
@@ -995,11 +1001,12 @@
 
     const category = findCategory(work.category);
     const detail = document.querySelector(".detail");
-    detail.classList.toggle("is-ink", work.category === "ink");
+    const isLarge = isLargeWork(work);
+    detail.classList.toggle("is-large", isLarge);
     detail.classList.toggle("is-sculpture", isSculpture);
     detail.classList.toggle("is-drawing", isDrawing);
     detail.classList.remove("is-video");
-    detail.classList.toggle("is-featured", work.category === "ink" && work.type !== "view" && work.order === 1);
+    detail.classList.toggle("is-featured", isLarge && work.type !== "view" && work.order === 1);
     detail.classList.toggle("is-view", work.type === "view");
     detail.classList.toggle("is-wide", !!work.wide);
     detail.classList.toggle("is-compact", !!work.compact);
