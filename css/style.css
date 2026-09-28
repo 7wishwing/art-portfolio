@@ -93,10 +93,40 @@ button {
 }
 
 .logo {
+  position: relative;
+  display: inline-grid;
+  justify-items: start;
+  align-items: baseline;
   font-family: "Cormorant Garamond", "Noto Serif KR", serif;
   font-size: 1.45rem;
   font-weight: 400;
   letter-spacing: 0.08em;
+}
+
+.logo:hover,
+.logo:focus-visible {
+  color: inherit;
+}
+
+.logo span {
+  grid-area: 1 / 1;
+  transition: opacity 0.22s ease;
+}
+
+.logo-hangul {
+  opacity: 0;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .logo:hover .logo-hanja,
+  .logo:focus-visible .logo-hanja {
+    opacity: 0;
+  }
+
+  .logo:hover .logo-hangul,
+  .logo:focus-visible .logo-hangul {
+    opacity: 1;
+  }
 }
 
 .nav {

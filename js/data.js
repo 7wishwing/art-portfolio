@@ -11,7 +11,7 @@ const ARTIST = {
   location: "Busan, Korea",
   email: "https://brunch.co.kr/@quetzal",
   instagram: "https://www.instagram.com/0131_q/",
-  siteTitle: "허규",
+  siteTitle: "圭",
   statement: [
     "\"살아 있기 때문에 그린다.\"",
     "연약하면서도 질긴 하나의 생명을 가지고, 그 유한함 속에서 아름다움과 즐거움을 관통하며 살아 있기 위해 작업을 지어낸다. 작품을 통해 일방적으로 말하기보다, 열린 전시 공간 속에서 서로 다른 감각과 해석이 밀물과 썰물처럼 존재하는 과정을 통해 관객과 함께 작품을 완성하고자 한다.",

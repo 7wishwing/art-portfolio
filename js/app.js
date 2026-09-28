@@ -337,7 +337,10 @@
   }
 
   function renderArtist() {
-    document.querySelector(".logo").textContent = ARTIST.name;
+    const hanja = document.querySelector(".logo-hanja");
+    const hangul = document.querySelector(".logo-hangul");
+    if (hanja) hanja.textContent = ARTIST.siteTitle;
+    if (hangul) hangul.textContent = "규";
     document.getElementById("about-name").textContent = ARTIST.name;
     document.getElementById("about-location").textContent = ARTIST.location;
     const bio = document.getElementById("about-bio");
