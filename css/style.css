@@ -741,12 +741,12 @@ body.is-dark-page .game-card .thumb {
 .about-statement p {
   margin: 0 0 1.35rem;
   font-family: "Noto Serif KR", serif;
-  font-size: 1.05rem;
+  font-size: 1.14rem;
   line-height: 1.95;
 }
 
 .about-statement p.about-lead {
-  font-size: 1.22rem;
+  font-size: 1.34rem;
   line-height: 1.8;
   font-style: italic;
   transform: rotate(-1.2deg);
